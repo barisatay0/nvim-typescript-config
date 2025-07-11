@@ -35,7 +35,10 @@ Built using [lazy.nvim](https://github.com/folke/lazy.nvim) with LSP, Prettier, 
 
 ## ⚙️ Installation
 
-> **Requires:** `git`, `neovim (v0.8+)`, and `node` installed globally
+> **Requires:**
+> `neovim (v0.8+)`,
+> `node` installed globally,
+> `xclip` for x11 systems (optional)
 
 # 1. Clone this repository
 
