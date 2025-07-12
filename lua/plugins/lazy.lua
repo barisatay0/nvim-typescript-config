@@ -11,11 +11,11 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Install and configure plugins
 require("lazy").setup({
-    { "mhinz/vim-startify" },      -- Start screen
-    { "EdenEast/nightfox.nvim" },  -- Color schemes (includes 'carbonfox')
-    "nvim-lualine/lualine.nvim",   -- Status line
-    "nvim-tree/nvim-tree.lua",     -- File explorer
-    "nvim-tree/nvim-web-devicons", -- File icons
+    { "mhinz/vim-startify" },     -- Start screen
+    { "EdenEast/nightfox.nvim" }, -- Color schemes (includes 'carbonfox')
+    "nvim-lualine/lualine.nvim",  -- Status line
+
+    "kien/ctrlp.vim",             -- Fuzzy file finder
 
     -- LSP and completion
     "neovim/nvim-lspconfig",    -- LSP config

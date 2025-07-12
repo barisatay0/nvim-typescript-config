@@ -7,7 +7,3 @@ vim.opt.termguicolors = true      -- Enable true color support
 vim.opt.mouse = 'a'               -- Enable mouse in all modes
 vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
 vim.opt.wrap = false              -- Disable line wrapping
-
--- Keymaps
--- Open file tree with 'ctrl + n'
-vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
