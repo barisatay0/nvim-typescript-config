@@ -13,4 +13,9 @@ vim.opt.wrap = false              -- Disable line wrapping
 
 -- Show diagnostic (LSP) error messages under the cursor using <leader>e
 -- By default, <leader> is '\' unless you override it with `vim.g.mapleader'
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+
+-- Manually trigger completion menu (e.g. when returning to a word)
+vim.keymap.set("i", "<C-Space>", function()
+    require("cmp").complete()
+end)
