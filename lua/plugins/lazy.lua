@@ -15,8 +15,6 @@ require("lazy").setup({
     { "EdenEast/nightfox.nvim" }, -- Color schemes (includes 'carbonfox')
     "nvim-lualine/lualine.nvim",  -- Status line
 
-    "kien/ctrlp.vim",             -- Fuzzy file finder
-
     -- LSP and completion
     "neovim/nvim-lspconfig",    -- LSP config
     "hrsh7th/nvim-cmp",         -- Autocompletion
