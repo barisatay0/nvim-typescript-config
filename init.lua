@@ -1,5 +1,6 @@
 -- Settings
-require("settings.settings")
+require("settings.basic")
+require("settings.keymap")
 
 -- Plugins
 require("plugins.lazy")

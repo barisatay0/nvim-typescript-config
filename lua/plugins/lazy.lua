@@ -33,5 +33,23 @@ require("lazy").setup({
     {
         "nvimtools/none-ls.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
-    }
+    },
+
+    -- Tabline
+    {
+        "kdheepak/tabline.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+
+    -- Git signs
+    {
+        "lewis6991/gitsigns.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+    },
+
+    -- Indent blankline
+    {
+        "lukas-reineke/indent-blankline.nvim"
+    },
+
 })
