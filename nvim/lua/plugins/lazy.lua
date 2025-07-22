@@ -41,15 +41,4 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
-    -- Git signs
-    {
-        "lewis6991/gitsigns.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
-    },
-
-    -- Indent blankline
-    {
-        "lukas-reineke/indent-blankline.nvim"
-    },
-
 })
