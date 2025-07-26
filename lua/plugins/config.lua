@@ -55,3 +55,19 @@ require("ibl").setup({
         },
     },
 })
+
+-- Telescope Setup
+require('telescope').setup({
+    defaults = {
+        -- Global file ignore patterns
+        file_ignore_patterns = {
+            "node_modules/.*",
+            ".git/.*",
+            "%.min%.js",
+            "%.min%.css",
+            "dist/.*",
+            "build/.*",
+        },
+
+    }
+})
