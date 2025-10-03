@@ -6,8 +6,6 @@ require("mason-lspconfig").setup({
     ensure_installed = { "lua_ls", "ts_ls" },
 })
 
-
-
 -- Set up null-ls for external formatters (e.g., Prettier)
 local null_ls = require("null-ls")
 null_ls.setup({
@@ -25,5 +23,16 @@ null_ls.setup({
                 end,
             })
         end
+    end,
+})
+
+-- Set up ESLint LSP (uses project's local ESLint)
+local lspconfig = require("lspconfig")
+lspconfig.eslint.setup({
+    on_attach = function(bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            command = "EslintFixAll",
+        })
     end,
 })
