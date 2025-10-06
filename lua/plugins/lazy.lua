@@ -23,10 +23,17 @@ require("lazy").setup({
     "saadparwaiz1/cmp_luasnip", -- Snippet source for cmp
 
     -- Fuzzy finder
-    { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+    {
+        "nvim-telescope/telescope.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
 
     -- Mason (LSP installer)
-    { "williamboman/mason.nvim",       cmd = "Mason",                             build = ":MasonUpdate" },
+    {
+        "williamboman/mason.nvim",
+        cmd = "Mason",
+        build = ":MasonUpdate"
+    },
     "williamboman/mason-lspconfig.nvim",
 
     -- Formatter / Linter (null-ls)

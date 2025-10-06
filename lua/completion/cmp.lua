@@ -129,7 +129,8 @@ cmp.setup({
             }
 
             -- Set the icon
-            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
+            vim_item.kind = string.format('%s %s',
+                kind_icons[vim_item.kind], vim_item.kind)
 
             --  Limit entry text length to avoid duplicates
             if string.len(vim_item.abbr) > 25 then
