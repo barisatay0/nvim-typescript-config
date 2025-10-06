@@ -26,13 +26,25 @@ null_ls.setup({
     end,
 })
 
--- Set up ESLint LSP (uses project's local ESLint)
-local lspconfig = require("lspconfig")
-lspconfig.eslint.setup({
-    on_attach = function(client, bufnr)
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            command = "EslintFixAll",
-        })
+-- Set up ESLint LSP using the new vim.lsp.config API
+vim.lsp.config.eslint = {
+    cmd = { "vscode-eslint-language-server", "--stdio" },
+    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte" },
+    root_markers = { ".eslintrc", ".eslintrc.js", ".eslintrc.json", "eslint.config.js", "package.json" },
+}
+
+-- Enable ESLint with auto-fix on save
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client and client.name == "eslint" then
+            vim.api.nvim_create_autocmd("BufWritePre", {
+                buffer = args.buf,
+                command = "EslintFixAll",
+            })
+        end
     end,
 })
+
+-- Enable ESLint for current buffer types
+vim.lsp.enable('eslint')
